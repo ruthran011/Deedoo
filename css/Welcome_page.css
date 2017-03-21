@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+}
+div#first_div {
+    padding: 10px;
+    background-color: beige;
+    margin: 0px;
+}
+div#first_div ul{
+    list-style-type: none;
+}
+div#first_div li{
+    display: inline-block;
+}
+div#first_div li#dedoo{
+    font-size: 60px;
+    color: darkred;
+}
+div#first_div li.right{
+    float: right;
+    padding: 30px 20px 30px 20px;
+    font-size: 20px;
+}
+div#first_div li a{
+    text-decoration: none;
+    color: dimgray;
+}
+div#second_div{
+    padding: 80px;
+    background-image: url("../img/second_div.jpg");
+}
+div#second_div p#first{
+    font-size: 40px;
+    width: 600px;
+}
+div#second_div p#second{
+    font-size: 25px;
+    width: 500px;
+}
+div#third_div {
+    padding: 100px;
+    background-color: black;
+}
+div#third_div p{
+    margin: 20px 40px 0px 40px;
+    text-align: center;
+}
