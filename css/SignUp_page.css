@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+    background-color: chocolate;
+}
+div#deedoo{
+    padding: 25px 25px 27px 50px;
+    background-color: beige;
+    font-size: 60px;
+    color: darkred;
+}
+div.container label input{
+    display: inline-block;
+    color: green;
+}
+
+.container {
+    padding: 16px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+    color: dimgrey;
+}
+
+.register_type{
+    padding-bottom: 40px;
+}
+
+.university{
+    /*display: none;*/
+}
+
+.addition{
+    /*display: none;*/
+}
+
+p{
+    font-size: 20px;
+}
+
+.check_type{
+    margin-left: 20px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}

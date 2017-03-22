@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Deedoo - signup</title>
+    <link rel="stylesheet" href="../css/SignUp_page.css">
 </head>
 <body>
+    <div id="deedoo">
+        Deedoo
+    </div>
+
+    <h2>Sign Up Deedoo is absolutely free, and always will be !</h2>
+
+    <form action="/action_page.php">
+        <div class="container">
+            <div class="register_type">
+                <p><b>Select registration type here</b></p>
+                <div class="check_type">
+                    <input type="radio" name="registration_type" value="University">Register University<br>
+                    <input type="radio" name="registration_type" value="Lecturer">Register Lecturer<br>
+                    <input type="radio" name="registration_type" value="Student">Register Student<br>
+                </div>
+            </div>
+
+            <div class="university">
+                <label><b>Name</b></label>
+                <input type="text" placeholder="Enter University Name" name="uni_name" required>
+
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter University Username" name="uni_username" required>
+
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label><b>Faculty</b></label>
+
+                <label><b>Department</b></label>
+
+                <label><b>Module</b></label>
+
+                <label><b>Admin</b></label>
+                <input type="text" placeholder="Enter Admin Name" name="admin_name" required>
+
+                <label><b>Admin Username</b></label>
+                <input type="text" placeholder="Enter Admin Username" name="admin_username" required>
+
+                <label><b>Admin password</b></label>
+                <input type="password" placeholder="Enter Admin password" name="admin_pw" required>
+
+                <label><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="repeat_pw" required>
+            </div>
+
+            <div class="addition">
+                <input type="checkbox" checked="checked"> Remember me
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </form>
 
 </body>
 </html>

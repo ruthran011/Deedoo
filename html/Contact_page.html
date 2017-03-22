@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Deedo - contact us</title>
+    <link rel="stylesheet" href="../css/Contact_page.css">
 </head>
 <body>
+    <div class="deedoo">
+        Deedoo
+    </div>
+    <div id="map"></div>
 
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(6.79, 79.9),
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            var marker = new google.maps.Marker({position:mapOptions.center});
+            marker.setMap(map);
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "Deedoo Head Office !"
+            });
+            infowindow.open(map,marker);
+        }
+    </script>
+
+    <div class="contact">
+        <p style="font-size: 40px; font-family: 'DejaVu Sans'; margin-bottom: 10px">Contact Us</p>
+        <p style="font-size: 35px; color: orange">Hello there! Let's talk</p>
+        <p>If you’re interested in customised Deedoo options and services to extend your site or wish to contact us for any other reason,
+            please complete the form below and one of our team will be in touch to help with your enquiry.
+        </p>
+        <p style="padding: 15px; background-color: beige; margin-bottom: 50px; margin-right: 0px">Fields marked with an <span style="color: red">*</span> are required</p>
+
+        <div class="form">
+            <label>Name*</label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+
+            <label>Email*</label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+
+            <label>Country</label>
+            <input type="" placeholder="Enter Admin Username" name="country">
+
+            <label>Mobile number</label>
+            <div class="dropdown_code">
+                <button class="dropdown">Code</button>
+                <div class="content">
+                    <a>Sri lanka</a>
+                    <a>India</a>
+                    <a>Australia</a>
+                    <a>Austria</a>
+                    <a>England</a>
+                </div>
+            </div>
+            <input type="text" placeholder="Enter mobile number" name="mobile" style="display:inline-block; width: 60%">
+
+            <label>What are you looking for</label>
+            <input type="text">
+
+            <label>Organization name</label>
+            <input type="text" placeholder="Repeat Password" name="repeat_pw" required>
+
+            <label>Tell us a little more about what you need</label>
+            <input type="text" placeholder="Enter Admin Name" name="admin_name" required>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDt1xBWxRL7zxL6fIr8B-2ZCCm1DTVRAc&callback=myMap"></script>
 </body>
 </html>
