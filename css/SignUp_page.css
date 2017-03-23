@@ -35,8 +35,16 @@ h2{
     padding-bottom: 40px;
 }
 
-.university{
-    /*display: none;*/
+#university{
+    /*display: block;*/
+}
+
+#student{
+    display: none;
+}
+
+#lecturer{
+    display: none;
 }
 
 .addition{
@@ -51,7 +59,7 @@ p{
     margin-left: 20px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

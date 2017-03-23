@@ -26,23 +26,50 @@ input{
     margin-bottom: 20px;
 
 }
-.dropdown{
-    width: 60px;
-    height: 33px;
-    float: left;
-    margin-right: 20px;
-    cursor: pointer;
+/*.dropdown{*/
+    /*padding: 8px;*/
+    /*background-color: black;*/
+    /*color: white;*/
+    /*float: left;*/
+    /*margin-right: 20px;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.content{*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*max-height: 200px;*/
+    /*overflow: auto;*/
+/*}*/
+/*.content a{*/
+    /*background-color: white;*/
+    /*padding: 5px;*/
+    /*display: block;*/
+    /*width: 200px;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.dropdown_code:hover .content{*/
+    /*display: block;*/
+/*}*/
+/*.content a:hover {*/
+    /*background-color: blue;*/
+    /*color: white;*/
+/*}*/
+
+textarea{
+    width: 72%;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
-.content{
-    display: none;
-    position: absolute;
+span{
+    color: red;
+    margin-left: 2px;
+    margin-right: 2px;
 }
-.content a{
-    background-color: white;
-    padding: 5px;
-    display: block;
-    width: 200px;
-}
-.dropdown_code:hover .content{
-    display: block;
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
