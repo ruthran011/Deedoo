@@ -12,18 +12,18 @@
 
     <h2>Sign Up Deedoo is absolutely free, and always will be !</h2>
 
-    <form method="post" action="../php/databaseConnect.php">
-        <div class="container">
-            <div class="register_type">
-                <p><b>Select registration type here</b></p>
-                <div class="check_type">
-                    <input type="radio" onclick="document.getElementById('university').style.display='block'; document.getElementById('lecturer').style.display='none'; document.getElementById('student').style.display='none';" name="registration_type" value="University">Register University<br>
-                    <input type="radio" onclick="document.getElementById('lecturer').style.display='block'; document.getElementById('student').style.display='none'; document.getElementById('university').style.display='none';" name="registration_type" value="Lecturer">Register Lecturer<br>
-                    <input type="radio" onclick="document.getElementById('student').style.display='block'; document.getElementById('lecturer').style.display='none'; document.getElementById('university').style.display='none';" name="registration_type" value="Student">Register Student<br>
-                </div>
-            </div>
+    <div class="register_type">
+        <p><b>Select registration type here</b></p>
+        <div class="check_type">
+            <input type="radio" onclick="document.getElementById('university').style.display='block'; document.getElementById('lecturer').style.display='none'; document.getElementById('student').style.display='none';" name="registration_type" value="University" checked>Register University<br>
+            <input type="radio" onclick="document.getElementById('lecturer').style.display='block'; document.getElementById('student').style.display='none'; document.getElementById('university').style.display='none';" name="registration_type" value="Lecturer">Register Lecturer<br>
+            <input type="radio" onclick="document.getElementById('student').style.display='block'; document.getElementById('lecturer').style.display='none'; document.getElementById('university').style.display='none';" name="registration_type" value="Student">Register Student<br>
+        </div>
+    </div>
 
-            <div id="university">
+    <form action="../php/databaseConnect.php" method="post" id="university">
+        <div class="container">
+            <div>
                 <label><b>Name</b></label>
                 <input type="text" placeholder="Enter University Name" name="uni_name" required>
 
@@ -56,12 +56,27 @@
                 <input type="password" placeholder="Repeat Password" name="repeat_pw" required>
             </div>
 
-            <div id="lecturer">
+            <div class="addition">
+                <input type="checkbox" checked="checked"> Remember me
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <form action="../php/databaseConnect.php" method="post" id="lecturer">
+        <div class="container">
+            <div>
                 <label><b>Name</b></label>
-                <input type="text" placeholder="Enter University Name" name="uni_name" required>
+                <input type="text" placeholder="Enter University Name" name="lec_name" required>
 
                 <label><b>Profession</b></label>
-                <input type="text" placeholder="Enter Admin Username" name="admin_username" required>
+                <input type="text" placeholder="Enter Admin Username" name="profession" required>
 
                 <label><b>University</b></label>
 
@@ -75,21 +90,36 @@
                 <input type="number" placeholder="Enter Admin Name" name="contact_no" required>
 
                 <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <input type="text" placeholder="Enter Username" name="lec_username" required>
 
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pw" required>
+                <input type="password" placeholder="Enter Password" name="lec_pw" required>
 
                 <label><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="repeat_pw" required>
+                <input type="password" placeholder="Repeat Password" name="lec_repeat_pw" required>
 
                 <label><b>Email</b></label>
-                <input type="email" placeholder="Enter Email" name="email" required>
+                <input type="email" placeholder="Enter Email" name="lec_email" required>
             </div>
 
-            <div id="student">
+            <div class="addition">
+                <input type="checkbox" checked="checked"> Remember me
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <form action="../php/databaseConnect.php" method="post" id="student">
+        <div class="container">
+            <div>
                 <label><b>Name</b></label>
-                <input type="text" placeholder="Enter University Name" name="uni_name" required>
+                <input type="text" placeholder="Enter University Name" name="stu_name" required>
 
                 <label><b>University</b></label>
 
@@ -103,16 +133,16 @@
                 <input type="text" placeholder="Enter Index no" name="index_no" required>
 
                 <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <input type="text" placeholder="Enter Username" name="stu_username" required>
 
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pw" required>
+                <input type="password" placeholder="Enter Password" name="stu_pw" required>
 
                 <label><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="repeat_pw" required>
+                <input type="password" placeholder="Repeat Password" name="stu_repeat_pw" required>
 
                 <label><b>Email</b></label>
-                <input type="email" placeholder="Enter Email" name="email" required>
+                <input type="email" placeholder="Enter Email" name="stu_email" required>
             </div>
 
             <div class="addition">
@@ -125,11 +155,8 @@
                 </div>
             </div>
         </div>
+
     </form>
-
-    <script>
-
-    </script>
 
 </body>
 </html>
