@@ -13,8 +13,10 @@ body{
     height: 400px;
 }
 .contact{
-    width: 60%;
+    width: 50%;
     margin-left: 60px;
+    float: left;
+    height: 960px;
 }
 label, input{
     display: block;
@@ -61,7 +63,7 @@ textarea{
     margin-bottom: 20px;
     border-radius: 5px;
 }
-span{
+.contact span{
     color: red;
     margin-left: 2px;
     margin-right: 2px;
@@ -72,4 +74,20 @@ button{
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     margin-top: 10px;
+    display: block;
+}
+.mail{
+    width: 20%;
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 35px;
+}
+.mail h1{
+    font-size: 26px;
+}
+.mail p{
+    font-size: 17px;
+    margin-top: 20px;
+    color: grey;
+    /*margin-left: 20px;*/
 }

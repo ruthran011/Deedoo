@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+}
+div#deedoo{
+    padding: 25px 25px 27px 50px;
+    background-color: beige;
+    font-size: 60px;
+    color: darkred;
+}
+.image{
+    background-image: url("../img/about_3.jpg");
+    height: 390px;
+}
+.para{
+    margin-left: 60px;
+    margin-top: 60px;
+    /*font-family: "DejaVu Serif";*/
+    width: 70%;
+    height: 550px;
+    text-emphasis: none;
+}
+.para #para_1{
+    font-size: 35px;
+    color: orange;
+}
+.para #para_2{
+    margin-top: 60px;
+    font-size: 18px;
+    color: black;
+}

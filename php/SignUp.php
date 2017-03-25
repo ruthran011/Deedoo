@@ -7,14 +7,20 @@
 
 //    phpinfo();
 
-    $sql = null;
+//    $sql = null;
 
     if (isset($_POST["uni_name"]) && isset($_POST["uni_username"]) && isset($_POST["email"]) && isset($_POST["admin_name"]) &&
         isset($_POST["admin_username"]) && isset($_POST["admin_pw"])){
 
-        $sql = "INSERT INTO University (Uni_name , University_un, University_email, Faculty, Department, Module, Admin_name, Admin_un, Admin_pw)
-                VALUES ('hello', 'uni_username', 'email', 'kk','kk','kk','admin_name', 'admin_username', 'admin_pw')";
+        $uni_name = $_POST["uni_name"];
+        $uni_username = $_POST["uni_username"];
+        $email = $_POST["email"];
+        $admin_name = $_POST["admin_name"];
+        $admin_username = $_POST["admin_username"];
+        $admin_pw = $_POST["admin_pw"];
 
+        $sql = "INSERT INTO University (Uni_name , University_un, University_email, Faculty, Department, Module, Admin_name, Admin_un, Admin_pw)
+                VALUES ((string)$uni_name, '', '','kk','kk','admin_name', '', '', '')";
     }
 
     elseif (isset($_POST['uni_name']) && $_POST['uni_username'] && $_POST['email'] && $_POST['admin_name'] &&
@@ -31,7 +37,7 @@
                 VALUES ()";
     }else{
 
-        echo 'ther';
+        echo 'Please provide valid data!';
     }
 
     $servername = "localhost";

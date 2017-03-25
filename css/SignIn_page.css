@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    background-image: url("../img/signin.png");
+}
+
+div#deedoo{
+    padding: 25px 25px 27px 50px;
+    background-color: beige;
+    font-size: 60px;
+    color: darkred;
+}
+
+.signin{
+    margin-left: 40%;
+    width: 600px;
+}
+
+.form{
+    margin-top: 40px;
+}
+
+.form label{
+    display: block;
+    font-size: 18px;
+}
+
+.form input{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.form p a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.form p a:hover{
+    text-decoration: underline;
+    color: purple;
+}

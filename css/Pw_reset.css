@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    background-color: burlywood;
+}
+div#deedoo{
+    padding: 25px 25px 27px 50px;
+    background-color: beige;
+    font-size: 60px;
+    color: darkred;
+}
+.reset{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+.reset label{
+    font-size: 17px;
+    display: block;
+}
+.reset input{
+    width: 60%;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.reset p{
+    font-size: 30px;
+    color: darkblue;
+    margin-top: 70px;
+}
