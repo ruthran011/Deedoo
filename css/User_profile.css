@@ -1,0 +1,10 @@
+body{
+    margin: 0px;
+    background-image: url("../img/signup.jpg");
+}
+div#deedoo{
+    padding: 25px 25px 27px 50px;
+    background-color: beige;
+    font-size: 60px;
+    color: darkred;
+}

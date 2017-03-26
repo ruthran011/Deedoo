@@ -1,8 +1,6 @@
 body{
     margin: 0px;
-    /*background-color: burlywood;*/
     background-image: url("../img/signup.jpg");
-    /*background-repeat: no-repeat;*/
 }
 div#deedoo{
     padding: 25px 25px 27px 50px;
@@ -74,14 +72,16 @@ h2{
 }
 
 
-/*.plus_button{*/
-    /*display: inline-block;*/
-    /*width: 70px;*/
-    /*!*height: 30px;*!*/
-    /*border-radius: 5px;*/
-    /*margin-left: 25px;*/
-    /*padding: 7px;*/
-/*}*/
+#plus_button_1, #plus_button_2, #plus_button_3, #plus_button_4, #plus_button_5,
+#plus_button_6, #plus_button_7, #plus_button_8, #plus_button_9, #plus_button_10, #plus_button_11,
+#plus_button_12, #plus_button_13,#plus_button_14, #plus_button_15, #plus_button_16{
+    display: inline-block;
+    width: 90px;
+    /*height: 30px;*/
+    border-radius: 5px;
+    margin-left: 25px;
+    padding: 7px;
+}
 
 p{
     font-size: 20px;
@@ -137,3 +137,8 @@ button {
         width: 100%;
     }
 }
+
+/*#uni_form #one, #two, #three, #four, #five*/
+/*#six, #seven, #eight, #nine{*/
+    /*display: none;*/
+/*}*/

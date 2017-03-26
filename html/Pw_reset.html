@@ -9,13 +9,16 @@
     <div id="deedoo">
         Deedoo
     </div>
-    <form class="reset" action="Pw_changed.html">
+    <form class="reset" action="../php/GetData.php" method="post" onsubmit="return validateForm(this)">
         <p>
             Reset your password
         </p>
 
         <label>Username</label>
         <input type="text" placeholder="Enter username.." name="username" required>
+
+        <label>Email</label>
+        <input type="text" placeholder="Enter email.." name="email" required>
 
         <label>New password</label>
         <input type="password" placeholder="Enter new password.." name="pw" required>
@@ -25,5 +28,13 @@
 
         <input type="submit" style="color: white; background-color: darkblue; border-radius: 10px; border: black; width: 80px; cursor: pointer">
     </form>
+    <script>
+        function validateForm(form) {
+            if(form['pw'].value != form['pw_re'].value){
+                alert("Passwords don't match!");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

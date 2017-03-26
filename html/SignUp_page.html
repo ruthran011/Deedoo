@@ -22,9 +22,9 @@
         </div>
 
         <div class="form">
-            <form action="../php/InsertData.php" method="post" id="university">
+            <form action="../php/InsertData.php" method="post" id="university" onsubmit="return validateForm(this)">
                 <div class="container">
-                    <div>
+                    <div id="uni_form">
                         <label><b>Name</b></label>
                         <input type="text" placeholder="Enter University Name" name="uni_name" required>
 
@@ -34,37 +34,96 @@
                         <label><b>Email</b></label>
                         <input type="text" placeholder="Enter Email" name="email" required>
 
-                        <label><b>Add Faculty</b></label>
-                        <script>
-                            function getData() {
-                                var database = "Faculty";
-                                var column = "faculty";
-
-                                window.location.href = "../php/GetData.php?w1=" + database + "&w2=" + column;
-                            }
-                        </script>
-                        <!--<input type="text" name="faculty_1" style="display: inline-block; width: 370px; margin-left: 30px; height: 30px">-->
-                        <!--<button type="button" onclick="" class="plus_button">Add</button>-->
-
-                        <!--<label><b>Add Department</b></label>-->
-                        <!--<input type="text" name="department_1" style="display: inline-block; width: 370px; margin-left: 30px; height: 30px">-->
-                        <!--<button type="button" onclick="" class="plus_button">Add</button>-->
-
-                        <!--<label><b>Add Module</b></label>-->
-                        <!--<input type="text" name="module_1" style="display: inline-block; width: 370px; margin-left: 30px; height: 30px">-->
-                        <!--<button type="button" onclick="" class="plus_button">Add</button>-->
-
-                        <label><b>Admin</b></label>
-                        <input type="text" placeholder="Enter Admin Name" name="admin_name" required>
-
-                        <label><b>Admin Username</b></label>
-                        <input type="text" placeholder="Enter Admin Username" name="admin_username" required>
-
-                        <label><b>Admin password</b></label>
-                        <input type="password" placeholder="Enter Admin password" name="admin_pw" required>
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter password" name="pw" required>
 
                         <label><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="repeat_pw" required>
+                        <input type="password" placeholder="Repeat Password" name="rpw" required>
+
+                        <label><b>Add Faculty</b></label>
+                        <input type="text" name="faculty_1" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                        <button type="button" id="plus_button_1" onclick="document.getElementById('one').style.display = 'inline-block';
+                            document.getElementById('plus_button_1').style.display='none'">Add more</button>
+
+                        <div id="one" style="display: none">
+                            <input type="text" name="faculty_2" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_2" onclick="document.getElementById('two').style.display = 'inline-block';
+                             document.getElementById('plus_button_2').style.display='none'">Add more</button>
+                        </div>
+                        <div id="two" style="display: none">
+                            <input type="text" name="faculty_3" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_3" onclick="document.getElementById('three').style.display = 'inline-block';
+                             document.getElementById('plus_button_3').style.display='none'">Add more</button>
+                        </div>
+                        <div id="three" style="display: none">
+                            <input type="text" name="faculty_4" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_4" onclick="document.getElementById('four').style.display = 'inline-block';
+                             document.getElementById('plus_button_4').style.display='none'">Add more</button>
+                        </div>
+                        <div id="four" style="display: none">
+                            <input type="text" name="faculty_5" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_5" onclick="document.getElementById('five').style.display = 'inline-block';
+                             document.getElementById('plus_button_5').style.display='none'">Add more</button>
+                        </div>
+                        <div id="five" style="display: none">
+                            <input type="text" name="faculty_6" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_6">Add more</button>
+                        </div>
+
+
+
+                        <label><b>Add Department</b></label>
+                        <input type="text" name="department_1" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                        <button type="button" id="plus_button_7" onclick="document.getElementById('six').style.display = 'inline-block';
+                         document.getElementById('plus_button_7').style.display='none'">Add more</button>
+
+                        <div id="six" style="display: none">
+                            <input type="text" name="department_2" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_8" onclick="document.getElementById('seven').style.display = 'inline-block';
+                             document.getElementById('plus_button_8').style.display='none'">Add more</button>
+                        </div>
+                        <div id="seven" style="display: none">
+                            <input type="text" name="department_3" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_9" onclick="document.getElementById('eight').style.display = 'inline-block';
+                             document.getElementById('plus_button_9').style.display='none'">Add more</button>
+                        </div>
+                        <div id="eight" style="display: none">
+                            <input type="text" name="department_4" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_10" onclick="document.getElementById('nine').style.display = 'inline-block';
+                             document.getElementById('plus_button_10').style.display='none'">Add more</button>
+                        </div>
+                        <div id="nine" style="display: none">
+                            <input type="text" name="department_5" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_11">Add more</button>
+                        </div>
+
+
+
+                        <label><b>Add Module</b></label>
+                        <input type="text" name="module_1" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                        <button type="button" id="plus_button_16" onclick="document.getElementById('ten').style.display = 'inline-block';
+                         document.getElementById('plus_button_16').style.display='none'">Add more</button>
+
+                        <div id="ten" style="display: none">
+                            <input type="text" name="module_2" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_12" onclick="document.getElementById('eleven').style.display = 'inline-block';
+                             document.getElementById('plus_button_12').style.display='none'">Add more</button>
+                        </div>
+                        <div id="eleven" style="display: none">
+                            <input type="text" name="module_3" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_13" onclick="document.getElementById('twelve').style.display = 'inline-block';
+                             document.getElementById('plus_button_13').style.display='none'">Add more</button>
+                        </div>
+                        <div id="twelve" style="display: none">
+                            <input type="text" name="module_4" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_14" onclick="document.getElementById('thirteen').style.display = 'inline-block';
+                             document.getElementById('plus_button_14').style.display='none'">Add more</button>
+                        </div>
+                        <div id="thirteen" style="display: none">
+                            <input type="text" name="module_5" style="display: inline-block; width: 350px; margin-left: 30px; height: 30px">
+                            <button type="button" id="plus_button_15">Add more</button>
+                        </div>
+
                     </div>
 
                     <div class="addition">
@@ -80,22 +139,14 @@
                 </div>
             </form>
 
-            <form action="../php/InsertData.php" method="post" id="lecturer">
+            <form action="../php/InsertData.php" method="post" id="lecturer" onsubmit="return validateForm(this)">
                 <div class="container">
                     <div>
                         <label><b>Name</b></label>
-                        <input type="text" placeholder="Enter University Name" name="lec_name" required>
+                        <input type="text" placeholder="Enter Name" name="lec_name" required>
 
                         <label><b>Profession</b></label>
-                        <input type="text" placeholder="Enter Admin Username" name="profession" required>
-
-                        <label><b>University</b></label>
-
-                        <label><b>Faculty</b></label>
-
-                        <label><b>Department</b></label>
-
-                        <label><b>Subject</b></label>
+                        <input type="text" placeholder="Enter profession" name="profession" required>
 
                         <label><b>Contact no</b></label>
                         <input type="number" placeholder="Enter contact number" name="contact_no" required>
@@ -104,13 +155,13 @@
                         <input type="text" placeholder="Enter Username" name="lec_username" required>
 
                         <label><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="lec_pw" required>
+                        <input type="password" placeholder="Enter Password" name="pw" required>
 
                         <label><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="lec_repeat_pw" required>
+                        <input type="password" placeholder="Repeat Password" name="rpw" required>
 
                         <label><b>Email</b></label>
-                        <input type="email" placeholder="Enter Email" name="lec_email" required>
+                        <input type="text" placeholder="Enter Email" name="lec_email" required>
                     </div>
 
                     <div class="addition">
@@ -126,34 +177,26 @@
 
             </form>
 
-            <form action="../php/InsertData.php" method="post" id="student">
+            <form action="../php/InsertData.php" method="post" id="student" onsubmit="return validateForm(this)">
                 <div class="container">
                     <div>
                         <label><b>Name</b></label>
-                        <input type="text" placeholder="Enter University Name" name="stu_name" required>
-
-                        <label><b>University</b></label>
-
-                        <label><b>Faculty</b></label>
-
-                        <label><b>Department</b></label>
-
-                        <label><b>Subject</b></label>
-
-                        <label><b>Index number</b></label>
-                        <input type="text" placeholder="Enter Index no" name="index_no" required>
+                        <input type="text" placeholder="Enter Name" name="stu_name" required>
 
                         <label><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="stu_username" required>
 
                         <label><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="stu_pw" required>
+                        <input type="password" placeholder="Enter Password" name="pw" required>
 
                         <label><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="stu_repeat_pw" required>
+                        <input type="password" placeholder="Repeat Password" name="rpw" required>
+
+                        <label><b>Contact no</b></label>
+                        <input type="number" placeholder="Enter contact number" name="Contact_no" required>
 
                         <label><b>Email</b></label>
-                        <input type="email" placeholder="Enter Email" name="stu_email" required>
+                        <input type="text" placeholder="Enter Email" name="stu_email" required>
                     </div>
 
                     <div class="addition">
@@ -168,6 +211,15 @@
                 </div>
             </form>
         </div>
+
+        <script>
+            function validateForm(form) {
+                if (form['pw'].value != form['rpw'].value) {
+                    alert("Passwords don't match!");
+                    return false;
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
