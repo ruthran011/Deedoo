@@ -22,7 +22,7 @@
         </div>
 
         <div class="form">
-            <form action="../php/SignUp.php" method="post" id="university">
+            <form action="../php/InsertData.php" method="post" id="university">
                 <div class="container">
                     <div>
                         <label><b>Name</b></label>
@@ -35,14 +35,24 @@
                         <input type="text" placeholder="Enter Email" name="email" required>
 
                         <label><b>Add Faculty</b></label>
-                        <input type="text" name="faculty_1">
-                        <button type="button" onclick="">Add faculty</button>
+                        <script>
+                            function getData() {
+                                var database = "Faculty";
+                                var column = "faculty";
 
-                        <label><b>Add Department</b></label>
-                        <button>Add department</button>
+                                window.location.href = "../php/GetData.php?w1=" + database + "&w2=" + column;
+                            }
+                        </script>
+                        <!--<input type="text" name="faculty_1" style="display: inline-block; width: 370px; margin-left: 30px; height: 30px">-->
+                        <!--<button type="button" onclick="" class="plus_button">Add</button>-->
 
-                        <label><b>Add Module</b></label>
-                        <button>Add module</button>
+                        <!--<label><b>Add Department</b></label>-->
+                        <!--<input type="text" name="department_1" style="display: inline-block; width: 370px; margin-left: 30px; height: 30px">-->
+                        <!--<button type="button" onclick="" class="plus_button">Add</button>-->
+
+                        <!--<label><b>Add Module</b></label>-->
+                        <!--<input type="text" name="module_1" style="display: inline-block; width: 370px; margin-left: 30px; height: 30px">-->
+                        <!--<button type="button" onclick="" class="plus_button">Add</button>-->
 
                         <label><b>Admin</b></label>
                         <input type="text" placeholder="Enter Admin Name" name="admin_name" required>
@@ -70,7 +80,7 @@
                 </div>
             </form>
 
-            <form action="../php/SignUp.php" method="post" id="lecturer">
+            <form action="../php/InsertData.php" method="post" id="lecturer">
                 <div class="container">
                     <div>
                         <label><b>Name</b></label>
@@ -88,7 +98,7 @@
                         <label><b>Subject</b></label>
 
                         <label><b>Contact no</b></label>
-                        <input type="number" placeholder="Enter Admin Name" name="contact_no" required>
+                        <input type="number" placeholder="Enter contact number" name="contact_no" required>
 
                         <label><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="lec_username" required>
@@ -116,7 +126,7 @@
 
             </form>
 
-            <form action="../php/SignUp.php" method="post" id="student">
+            <form action="../php/InsertData.php" method="post" id="student">
                 <div class="container">
                     <div>
                         <label><b>Name</b></label>
@@ -156,7 +166,6 @@
                         </div>
                     </div>
                 </div>
-
             </form>
         </div>
     </div>
